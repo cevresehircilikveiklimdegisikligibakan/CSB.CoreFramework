@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net5;net6.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.8.2</Version>
+    <Authors>Çevre Şehircilik ve İklim Değişikliği Bakanlığı - Coğrafi Bilgi Sistemleri Genel Müdürlüğü</Authors>
+    <Company>Çevre Şehircilik ve İklim Değişikliği Bakanlığı - Coğrafi Bilgi Sistemleri Genel Müdürlüğü</Company>
+    <PackageIcon>csb-logo.png</PackageIcon>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <None Include="..\..\..\..\theme\icon\csb-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.10" />
+    <PackageReference Include="Refit.HttpClientFactory" Version="6.1.15" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\utilities\CSB.Core.Utilities.Logging\CSB.Core.Utilities.Logging.csproj" />
+    <ProjectReference Include="..\..\utilities\CSB.Core.Utilities.MessageBroking.RabbitMQ\CSB.Core.Utilities.MessageBroking.RabbitMQ.csproj" />
+    <ProjectReference Include="..\CSB.Core.Web\CSB.Core.Web.csproj" />
+  </ItemGroup>
+
+</Project>

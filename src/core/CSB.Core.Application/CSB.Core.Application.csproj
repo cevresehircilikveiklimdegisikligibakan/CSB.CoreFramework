@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net5;net6.0</TargetFrameworks>
+    <Version>0.8.2</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Çevre Şehircilik ve İklim Değişikliği Bakanlığı - Coğrafi Bilgi Sistemleri Genel Müdürlüğü</Authors>
+	<Company>Çevre Şehircilik ve İklim Değişikliği Bakanlığı - Coğrafi Bilgi Sistemleri Genel Müdürlüğü</Company>
+	<PackageIcon>csb-logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\theme\icon\csb-logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.5" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.5" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSB.Core.Domain\CSB.Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
